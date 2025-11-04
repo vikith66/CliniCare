@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/profile_background">
+
+    <!-- Decorative Pink Circle (Top Right) -->
+    <ImageView
+        android:id="@+id/decorativePinkCircle"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="-40dp"
+        android:src="@drawable/decorative_pink_circle"
+        android:alpha="0.7"
+        android:contentDescription="Decorative element" />
+
+    <!-- Decorative Light Circle (Middle Left) -->
+    <ImageView
+        android:id="@+id/decorativeLightCircle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="-30dp"
+        android:src="@drawable/decorative_light_circle"
+        android:alpha="0.6"
+        android:contentDescription="Decorative element" />
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="16dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/back"
+            android:contentDescription="Back"
+            android:padding="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="User Profile"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/profile_text_dark"
+            android:gravity="center"
+            android:layout_marginEnd="24dp" />
+
+    </LinearLayout>
+
+    <!-- Main Content Container -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerLayout"
+        android:layout_above="@id/bottomNavigationBar"
+        android:padding="0dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="24dp"
+            android:paddingBottom="100dp">
+
+            <!-- Profile Picture -->
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/profile_picture_background"
+                android:gravity="center"
+                android:layout_marginBottom="32dp">
+
+                <ImageView
+                    android:id="@+id/ivProfilePicture"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_user_placeholder"
+                    android:contentDescription="Profile Picture"
+                    android:scaleType="centerCrop" />
+
+            </LinearLayout>
+
+            <!-- User Information Fields -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="32dp">
+
+                <!-- Name Field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name :"
+                        android:textSize="14sp"
+                        android:textColor="@color/profile_text_light"
+                        android:layout_marginBottom="8dp" />
+
+                    <EditText
+                        android:id="@+id/etUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/profile_field_background"
+                        android:padding="16dp"
+                        android:text="Rajesh Kumar"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/profile_text_dark"
+                        android:hint="Enter your name"
+                        android:inputType="textPersonName"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+
+                <!-- Email Field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email :"
+                        android:textSize="14sp"
+                        android:textColor="@color/profile_text_light"
+                        android:layout_marginBottom="8dp" />
+
+                    <EditText
+                        android:id="@+id/etUserEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/profile_field_background"
+                        android:padding="16dp"
+                        android:text="rajeshkumar123@gmail.com"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/profile_text_dark"
+                        android:hint="Enter your email"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+
+                <!-- Phone Field -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phone :"
+                        android:textSize="14sp"
+                        android:textColor="@color/profile_text_light"
+                        android:layout_marginBottom="8dp" />
+
+                    <EditText
+                        android:id="@+id/etUserPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/profile_field_background"
+                        android:padding="16dp"
+                        android:text="+91 99999 99999"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/profile_text_dark"
+                        android:hint="Enter your phone number"
+                        android:inputType="phone"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp">
+
+                <!-- Save Button -->
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/save_button_background"
+                    android:text="Save Changes"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Log Out Button -->
+                <Button
+                    android:id="@+id/btnLogOut"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/logout_button_background"
+                    android:text="Log Out"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNavigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@android:color/transparent"
+        android:padding="12dp"
+        android:paddingBottom="24dp"
+        android:gravity="center_vertical">
+
+        <!-- Home Button -->
+        <LinearLayout
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/nav_button_background"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_home_nav"
+                android:contentDescription="Home" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="12sp"
+                android:textColor="@color/profile_text_light"
+                android:layout_marginTop="6dp" />
+
+        </LinearLayout>
+
+        <!-- Inbox Button -->
+        <LinearLayout
+            android:id="@+id/navInbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/nav_button_background"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_inbox_nav"
+                android:contentDescription="Inbox" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inbox"
+                android:textSize="12sp"
+                android:textColor="@color/profile_text_light"
+                android:layout_marginTop="6dp" />
+
+        </LinearLayout>
+
+        <!-- User Button (Active) -->
+        <LinearLayout
+            android:id="@+id/navUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/nav_button_active_background"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_user_nav"
+                android:contentDescription="User" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User"
+                android:textSize="12sp"
+                android:textColor="@color/profile_text_light"
+                android:layout_marginTop="6dp" />
+
+            <!-- Active indicator dot -->
+            <View
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:background="@drawable/active_dot"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

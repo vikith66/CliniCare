@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light Theme Colors -->
+    <color name="primary_light">#6B46C1</color>
+    <color name="primary_dark_light">#553C9A</color>
+    <color name="background_light">#F8F9FA</color>
+    <color name="surface_light">#FFFFFF</color>
+    <color name="text_primary_light">#1A1A1A</color>
+    <color name="text_secondary_light">#666666</color>
+    <color name="accent_light">#FF6B6B</color>
+    
+    <!-- Dark Theme Colors -->
+    <color name="primary_dark">#4C1D95</color>
+    <color name="primary_dark_dark">#3B0764</color>
+    <color name="background_dark">#121212</color>
+    <color name="surface_dark">#1E1E1E</color>
+    <color name="text_primary_dark">#FFFFFF</color>
+    <color name="text_secondary_dark">#B3B3B3</color>
+    <color name="accent_dark">#FF8A80</color>
+    
+    <!-- Common Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    
+    <!-- Profile Field Background -->
+    <color name="profile_field_background">#F5F5F5</color>
+    
+    <!-- Profile Button -->
+    <color name="profile_button">#6B46C1</color>
+    
+    <!-- Profile Text Light -->
+    <color name="profile_text_light">#666666</color>
+    
+    <!-- Profile Background -->
+    <color name="profile_background">#F8F9FA</color>
+    
+    <!-- Profile Text Dark -->
+    <color name="profile_text_dark">#1A1A1A</color>
+    
+    <!-- Theme-aware aliases -->
+    <color name="text_primary">@color/text_primary_light</color>
+    <color name="text_secondary">@color/text_secondary_light</color>
+</resources>

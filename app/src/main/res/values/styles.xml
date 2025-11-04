@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CircleImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="CircularImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20%</item>
+    </style>
+    
+    <style name="CustomSearchView" parent="Widget.AppCompat.SearchView">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_secondary</item>
+    </style>
+</resources>

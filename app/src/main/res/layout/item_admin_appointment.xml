@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header with Appointment ID and Status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvAppointmentId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Appointment #12345"
+                android:textColor="#2C3E50"
+                android:textSize="18sp"
+                android:fontFamily="@font/inter_semibold" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BOOKED"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:fontFamily="@font/inter_semibold"
+                android:padding="8dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:background="@drawable/status_upcoming_background" />
+
+        </LinearLayout>
+
+        <!-- User Information -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Information"
+                android:textColor="#7F8C8D"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_medium"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email: "
+                    android:textColor="#34495E"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_medium" />
+
+                <TextView
+                    android:id="@+id/tvPatientEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="user@email.com"
+                    android:textColor="#2C3E50"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_medium" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvUserId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="User ID: abc123"
+                    android:textColor="#2C3E50"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_medium" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Doctor Information -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Doctor Information"
+                android:textColor="#7F8C8D"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_medium"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Doctor: "
+                    android:textColor="#34495E"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_medium" />
+
+                <TextView
+                    android:id="@+id/tvDoctorName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Dr. John Doe"
+                    android:textColor="#2C3E50"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_medium" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Category: "
+                    android:textColor="#34495E"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_medium" />
+
+                <TextView
+                    android:id="@+id/tvDoctorCategory"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cardiology"
+                    android:textColor="#2C3E50"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_medium" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Appointment Details -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Appointment Details"
+                android:textColor="#7F8C8D"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_medium"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date: "
+                    android:textColor="#34495E"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_medium" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="15/12/2024"
+                    android:textColor="#2C3E50"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_medium" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time: "
+                    android:textColor="#34495E"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_medium" />
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="10:00 AM"
+                    android:textColor="#2C3E50"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_medium" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Payment Information -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Information"
+                android:textColor="#7F8C8D"
+                android:textSize="14sp"
+                android:fontFamily="@font/inter_medium"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvPaymentMethod"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Payment: Credit Card"
+                    android:textColor="#2C3E50"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_medium" />
+
+                <TextView
+                    android:id="@+id/tvDoctorPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fees: ₹500"
+                    android:textColor="#2C3E50"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/inter_medium" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

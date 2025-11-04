@@ -1,0 +1,176 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradientbg"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content">
+
+            <!-- Title centered -->
+            <TextView
+                android:id="@+id/tvHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  Doctor Management"
+                android:textColor="#4D0037"
+                android:textSize="24sp"
+                android:layout_gravity="center"/>
+
+            <!-- Back icon top-left -->
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/back"
+                android:contentDescription="Back"
+                android:padding="4dp"
+                android:layout_gravity="start|center_vertical"/>
+        </FrameLayout>
+
+        <!-- Doctor Name -->
+        <EditText
+            android:id="@+id/etDoctorName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:hint="Doctor Name"
+            android:inputType="textPersonName"
+            android:padding="14dp"
+            android:textColor="#000000"
+            android:textColorHint="#595959"
+            android:elevation="5dp"
+            android:paddingStart="20dp"
+            android:background="@drawable/adddoctorbtn" />
+
+        <!-- Category -->
+        <!-- Category / Specialist -->
+        <Spinner
+            android:id="@+id/spDoctorCategory"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:elevation="5dp"
+            android:spinnerMode="dropdown"
+            android:background="@drawable/adddoctorbtn"
+            android:padding="14dp"/>
+
+
+        <!-- Ratings -->
+        <EditText
+            android:id="@+id/etDoctorRatings"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:hint="Ratings (0-5)"
+            android:inputType="numberDecimal"
+            android:elevation="5dp"
+            android:paddingStart="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#595959"
+            android:padding="14dp"
+            android:background="@drawable/adddoctorbtn"/>
+
+        <!-- Availability -->
+        <RadioGroup
+            android:id="@+id/rgAvailability"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbAvailable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Available"
+                android:textSize="18dp"
+                app:buttonTint="#0040B6"
+                android:textColor="#595959"
+                android:checked="true"/>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbNotAvailable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not Available"
+                android:textSize="18dp"
+                app:buttonTint="#984C82"
+                android:textColor="#595959"
+                android:layout_marginStart="24dp"/>
+        </RadioGroup>
+
+        <!-- Fees -->
+        <EditText
+            android:id="@+id/etDoctorPrice"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:hint="Fees"
+            android:inputType="numberDecimal"
+            android:elevation="5dp"
+            android:textColor="#000000"
+            android:textColorHint="#595959"
+            android:padding="14dp"
+            android:background="@drawable/adddoctorbtn"/>
+
+        <!-- About Doctor -->
+        <EditText
+            android:id="@+id/etDoctorAbout"
+            android:layout_width="300dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="12dp"
+            android:gravity="top"
+            android:hint="About Doctor"
+            android:inputType="textMultiLine"
+            android:padding="12dp"
+            android:elevation="4dp"
+            android:textColor="#000000"
+            android:textColorHint="#595959"
+            android:background="@drawable/adddoctorbtn"/>
+
+        <!-- Pick Image Button -->
+        <Button
+            android:id="@+id/btnimage"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:text="Select Doctor Image"
+            android:backgroundTint="#63984C"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"/>
+
+        <!-- Image Preview -->
+        <ImageView
+            android:id="@+id/ivDoctorPreview"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="12dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/adddoctorbtn"/>
+
+        <Button
+            android:id="@+id/btnAddDoctorSubmit"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:text="Add Doctor"
+            android:backgroundTint="#984C82"
+            android:layout_marginBottom="40dp"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+</ScrollView>

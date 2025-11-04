@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="@drawable/notification_background">
+
+    <!-- Doctor Image -->
+    <ImageView
+        android:id="@+id/notification_doctor_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_user_placeholder"
+        android:scaleType="centerCrop"
+        android:background="@drawable/profile_picture_background" />
+
+    <!-- Content -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/notification_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Appointment Confirmed!"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Doctor Name -->
+        <TextView
+            android:id="@+id/notification_doctor_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dr. John Smith"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="2dp" />
+
+        <!-- Date and Time -->
+        <TextView
+            android:id="@+id/notification_datetime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Today, 2:00 PM"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:alpha="0.8" />
+
+    </LinearLayout>
+
+    <!-- Status Icon -->
+    <ImageView
+        android:id="@+id/notification_status_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_notification_confirm"
+        android:contentDescription="Status" />
+
+</LinearLayout>

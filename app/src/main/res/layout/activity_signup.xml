@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bgcolor"
+    tools:context=".Signup">
+
+    <!-- Page Title -->
+
+    <!-- Back Icon -->
+
+    <TextView
+        android:id="@+id/tvSignupTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Sign Up"
+        android:textColor="#003C0D"
+        android:textSize="27dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <!-- Name -->
+
+    <!-- Email -->
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="38dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        app:srcCompat="@drawable/back" />
+
+    <!-- Phone -->
+
+    <!-- Password -->
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:background="@drawable/curvededgelogin"
+        android:fontFamily="@font/inter_semibold"
+        android:hint="Enter your name"
+        android:inputType="textPersonName"
+        android:paddingStart="35dp"
+        android:textColor="#000000"
+        android:textColorHint="#555555"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.172" />
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:background="@drawable/curvededgelogin"
+        android:fontFamily="@font/inter_semibold"
+        android:hint="Enter your phone number"
+        android:inputType="phone"
+        android:paddingStart="35dp"
+        android:textColor="#000000"
+        android:textColorHint="#555555"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:background="@drawable/curvededgelogin"
+        android:fontFamily="@font/inter_semibold"
+        android:hint="Enter your password"
+        android:inputType="textPassword"
+        android:paddingStart="35dp"
+        android:textColor="#000000"
+        android:textColorHint="#555555"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPhone"
+        app:layout_constraintVertical_bias="0.062" />
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#A9CAC9"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Create Account"
+        android:textColor="#003C0D"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        app:layout_constraintVertical_bias="0.069" />
+
+    <TextView
+        android:id="@+id/tvHaveAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Already have an account? Login"
+        android:textColor="#003C0D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSignup"
+        app:layout_constraintVertical_bias="0.112" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:background="@drawable/curvededgelogin"
+        android:fontFamily="@font/inter_semibold"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="35dp"
+        android:textColor="#526A6E"
+        android:textColorHint="#555555"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etName"
+        app:layout_constraintVertical_bias="0.04" />
+
+
+
+    <!-- Sign Up Button -->
+
+    <!-- Already have an account? -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

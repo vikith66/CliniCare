@@ -1,0 +1,63 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradientbgcategory">
+
+    <!-- Background overlay image -->
+    <ImageView
+        android:id="@+id/ivCategoryBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:alpha="1"
+        android:src="@drawable/patternbg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Back button -->
+
+    <!-- Page heading -->
+
+    <ImageView
+        android:id="@+id/ivCategoryBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="36dp"
+        android:contentDescription="Back"
+        android:padding="4dp"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvCategoryHeader"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.076" />
+
+    <TextView
+        android:id="@+id/tvCategoryHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textColor="#4D0037"
+        android:fontFamily="@font/inter_semibold"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <!-- RecyclerView for doctor list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCategoryDoctors"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCategoryHeader" />
+</androidx.constraintlayout.widget.ConstraintLayout>

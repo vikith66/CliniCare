@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradientbookappiontment">
+
+
+    <!-- Main content container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:padding="24dp">
+
+        <!-- Success Checkmark Icon -->
+        <ImageView
+            android:id="@+id/ivSuccess"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/checkmark_success"
+            android:contentDescription="Success"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Confirmation Title -->
+        <TextView
+            android:id="@+id/tvSuccessTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Appointment Confirmed !!"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#002C28"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium"/>
+
+        <!-- Instructions Message -->
+        <TextView
+            android:id="@+id/tvSuccessMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please arrive 15 minutes early and carry any previous medical reports or prescriptions."
+            android:textSize="16sp"
+            android:textColor="#595959"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:paddingHorizontal="16dp"/>
+
+    </LinearLayout>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNavigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@android:color/transparent"
+        android:padding="12dp">
+
+        <!-- Home Button -->
+        <LinearLayout
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_home_nav"
+                android:contentDescription="Home" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="12sp"
+                android:textColor="#699991"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <!-- Inbox Button -->
+        <LinearLayout
+            android:id="@+id/navInbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_inbox_nav"
+                android:contentDescription="Inbox" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inbox"
+                android:textSize="12sp"
+                android:textColor="#699991"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <!-- User Button -->
+        <LinearLayout
+            android:id="@+id/navUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_user_nav"
+                android:contentDescription="User" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User"
+                android:textSize="12sp"
+                android:textColor="#699991"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

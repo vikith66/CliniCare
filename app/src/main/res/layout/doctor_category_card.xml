@@ -1,0 +1,104 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    android:backgroundTint="#FFFFFF">
+
+    <!-- Vertical Layout for image and text -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Horizontal Layout for Image and Text (left image, right text) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                android:clipToOutline="true">
+
+                <ImageView
+                    android:id="@+id/ivDoctorImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/adddoctorbtn"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Text: Name, Category, Rating, and Availability -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:orientation="vertical"
+                android:paddingStart="12dp">
+
+                <!-- Doctor Name -->
+                <TextView
+                    android:id="@+id/tvDoctorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dr. NAME"
+                    android:fontFamily="@font/inter_semibold"
+                    android:textColor="#4D0037"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Category -->
+                <TextView
+                    android:id="@+id/tvDoctorCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CATEGORY"
+                    android:textColor="#8F156C"
+                    android:fontFamily="@font/inter_semibold"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="14sp" />
+
+                <!-- Rating -->
+                <TextView
+                    android:id="@+id/tvDoctorRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="⭐ 4.9"
+                    android:textColor="#FFA000"
+                    android:textSize="14sp" />
+
+                <!-- Availability Status -->
+                <TextView
+                    android:id="@+id/tvDoctorAvailability"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Available"
+                    android:textColor="#4CAF50"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Full width Book Appointment Button -->
+        <Button
+            android:id="@+id/btnBookAppointment"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:backgroundTint="#984C82"
+            android:text="Book Appointment"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_semibold"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

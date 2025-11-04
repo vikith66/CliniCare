@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/gradienthome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="385dp"
+        android:layout_height="322dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginBottom="516dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/whiteoverlay" />
+
+    <TextView
+        android:id="@+id/tvGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_medium"
+        android:text="Welcome"
+        android:textColor="@color/text_primary"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnAppointment"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.101" />
+
+    <!-- Theme Toggle Button -->
+    <ImageView
+        android:id="@+id/btnThemeToggle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_theme_toggle"
+        android:contentDescription="Toggle Theme"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvGreeting"
+        app:layout_constraintEnd_toStartOf="@id/btnAppointment"
+        app:layout_constraintTop_toTopOf="@id/tvGreeting"
+        android:layout_marginEnd="12dp" />
+
+    <!-- Appointment History Button -->
+    <ImageView
+        android:id="@+id/btnAppointment"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_appointment_button"
+        android:contentDescription="Appointment History"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvGreeting"
+        app:layout_constraintEnd_toStartOf="@id/btnUserProfile"
+        app:layout_constraintTop_toTopOf="@id/tvGreeting"
+        android:layout_marginEnd="12dp" />
+
+    <!-- Exit Button -->
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EXIT"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:background="@drawable/exit_button_background"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- User Profile Button -->
+    <ImageView
+        android:id="@+id/btnUserProfile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_user_profile_button"
+        android:contentDescription="User Profile"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvGreeting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvGreeting"
+        android:layout_marginEnd="16dp" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/searchcurve"
+        android:theme="@style/CustomSearchView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.191" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/inter_medium"
+        android:text="Categories"
+        android:textColor="@color/text_primary"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.305" />
+
+    <!-- SECOND ROW OF CATEGORIES -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/categoryContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingTop="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.355">
+
+        <!-- Category 1 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/card2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/surface_light">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/dentistimg" />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:text="Dentist"
+            android:textColor="#9AFFFFFF"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@id/card1"
+            app:layout_constraintStart_toStartOf="@id/card1"
+            app:layout_constraintTop_toBottomOf="@id/card1" />
+
+        <!-- Category 2 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintStart_toEndOf="@id/card1"
+            app:layout_constraintTop_toTopOf="@id/card1">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/surface_light">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/cardiology" />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:text="Cardiologist"
+            android:textColor="#99FFFFFF"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@id/card2"
+            app:layout_constraintStart_toStartOf="@id/card2"
+            app:layout_constraintTop_toBottomOf="@id/card2" />
+
+        <!-- Category 3 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card3"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintStart_toEndOf="@id/card2"
+            app:layout_constraintTop_toTopOf="@id/card1">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/surface_light">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/neurologist" />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:text="Neurologist"
+            android:textColor="#99FFFFFF"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@id/card3"
+            app:layout_constraintStart_toStartOf="@id/card3"
+            app:layout_constraintTop_toBottomOf="@id/card3" />
+
+        <!-- Category 4 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card4"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintStart_toEndOf="@id/card3"
+            app:layout_constraintTop_toTopOf="@id/card1">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/surface_light">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/allergy" />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:text="Dermatologist"
+            android:textColor="#99FFFFFF"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@id/card4"
+            app:layout_constraintStart_toStartOf="@id/card4"
+            app:layout_constraintTop_toBottomOf="@id/card4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/categoryContainerRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categoryContainer"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!-- Category 5 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card5"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/card6"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/surface_light">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/pediatrician" />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:text="Pediatrician"
+            android:textColor="#99FFFFFF"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@id/card5"
+            app:layout_constraintStart_toStartOf="@id/card5"
+            app:layout_constraintTop_toBottomOf="@id/card5" />
+
+        <!-- Category 6 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card6"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintStart_toEndOf="@id/card5"
+            app:layout_constraintTop_toTopOf="@id/card5">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/surface_light">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/orthopedics" />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:text="Orthopedic"
+            android:textColor="#99FFFFFF"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@id/card6"
+            app:layout_constraintStart_toStartOf="@id/card6"
+            app:layout_constraintTop_toBottomOf="@id/card6" />
+
+        <!-- Category 7 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card7"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintStart_toEndOf="@id/card6"
+            app:layout_constraintTop_toTopOf="@id/card5">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/surface_light">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/eyecare" />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:text="Eye Specialist"
+            android:textColor="#99FFFFFF"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@id/card7"
+            app:layout_constraintStart_toStartOf="@id/card7"
+            app:layout_constraintTop_toBottomOf="@id/card7" />
+
+        <!-- Category 8 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card8"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintStart_toEndOf="@id/card7"
+            app:layout_constraintTop_toTopOf="@id/card5">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/surface_light">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/psychiatrist"/>
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center"
+            android:text="Psychiatrist"
+            android:textColor="#99FFFFFF"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@id/card8"
+            app:layout_constraintStart_toStartOf="@id/card8"
+            app:layout_constraintTop_toBottomOf="@id/card8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_medium"
+        android:textSize="18dp"
+        android:text="Top Doctor"
+        android:textColor="#99FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.715" />
+
+
+    <!-- Top Doctors Card -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTopDoctors"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:scrollbars="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/textView11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

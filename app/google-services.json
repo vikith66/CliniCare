@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "836715935263",
+    "project_id": "hospital-appointment-85a86",
+    "storage_bucket": "hospital-appointment-85a86.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836715935263:android:63c5b802b6af03938c872a",
+        "android_client_info": {
+          "package_name": "com.example.hospitalappointment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANcL2xpI1czl-sEv6CunGqYBmZ_8h3OxU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

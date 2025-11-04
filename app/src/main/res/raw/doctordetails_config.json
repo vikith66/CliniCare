@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "446332953537",
+    "firebase_url": "https://doctordetails-712c2-default-rtdb.firebaseio.com",
+    "project_id": "doctordetails-712c2",
+    "storage_bucket": "doctordetails-712c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446332953537:android:01dbd5ff6420f19088c540",
+        "android_client_info": {
+          "package_name": "com.example.hospitalappointment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6m5C02wyjd9KELdmPfrd2WH2bx8TesBE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

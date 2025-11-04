@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Notification permissions -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HospitalAppointment">
+        <activity
+            android:name=".UserProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AppointmentHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SuccessActivity" />
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BookAppointment"
+            android:exported="false" />
+        <activity
+            android:name=".CategoryDoctorsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageDoctors"
+            android:exported="false" />
+        <activity
+            android:name=".Admin"
+            android:exported="false" />
+        <activity
+            android:name=".AdminAppointmentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddDoctorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Signup"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" /> <!-- Login/Signup Page (3rd Screen) -->
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OTPVerificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginSignupActivity"
+            android:exported="false" /> <!-- Main Screen (2nd Screen) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" /> <!-- Splash Screen (1st Screen - Launcher) -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Notification Service -->
+        <service
+            android:name=".AppointmentNotificationService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- Appointment Reminder Receiver -->
+        <receiver
+            android:name=".AppointmentReminderReceiver"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+
+</manifest>

@@ -1,0 +1,93 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    android:backgroundTint="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Doctor Photo -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            android:clipToOutline="true">
+
+            <ImageView
+                android:id="@+id/ivDoctorImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/adddoctorbtn"/>
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Text details and button -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="110dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="12dp"
+            android:weightSum="3">
+
+            <!-- Text info -->
+            <TextView
+                android:id="@+id/tvDoctorName"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Doctor Name"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#4D0037"/>
+
+            <TextView
+                android:id="@+id/tvDoctorCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Category"
+                android:textSize="14sp"
+                android:textColor="#8F156C"/>
+
+            <!-- Row with availability and button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="bottom|end"
+                android:layout_gravity="bottom">
+
+                <TextView
+                    android:id="@+id/tvDoctorAvailability"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|start"
+                    android:text="Available"
+                    android:textSize="12sp"
+                    android:textColor="#984C82"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/btnRemoveDoctor"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom|end"
+                    android:backgroundTint="#984C82"
+                    android:text="Remove"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

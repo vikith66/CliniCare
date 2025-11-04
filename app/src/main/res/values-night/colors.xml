@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark Theme Colors -->
+    <color name="primary">#4C1D95</color>
+    <color name="primary_dark">#3B0764</color>
+    <color name="background">#121212</color>
+    <color name="surface_dark">#1E1E1E</color>
+    <color name="text_primary_dark">#FFFFFF</color>
+    <color name="text_secondary_dark">#B3B3B3</color>
+    <color name="accent">#FF8A80</color>
+    
+    <!-- Dark Theme Specific -->
+    <color name="card_background_dark">#2D2D2D</color>
+    <color name="search_background_dark">#2D2D2D</color>
+    <color name="category_background_dark">#3D3D3D</color>
+    
+    <!-- Profile Field Background Dark -->
+    <color name="profile_field_background">#2D2D2D</color>
+    
+    <!-- Profile Button Dark -->
+    <color name="profile_button">#4C1D95</color>
+    
+    <!-- Profile Text Light Dark -->
+    <color name="profile_text_light">#FFFFFF</color>
+    
+    <!-- Profile Background Dark -->
+    <color name="profile_background">#121212</color>
+    
+    <!-- Profile Text Dark Dark -->
+    <color name="profile_text_dark">#FFFFFF</color>
+    
+    <!-- Theme-aware text colors -->
+    <color name="text_primary">@color/text_primary_dark</color>
+    <color name="text_secondary">@color/text_secondary_dark</color>
+</resources>
